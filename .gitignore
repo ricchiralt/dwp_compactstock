@@ -1,0 +1,26 @@
+# Debug logs
+debug_log.php
+
+# PHPUnit
+tests/phpunit.phar
+tests/coverage/
+tests/coverage-html/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# Backup files
+*.bak
+*.backup

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/5.7/phpunit.xsd"
+         bootstrap="bootstrap.php"
+         colors="true"
+         verbose="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false">
+    
+    <testsuites>
+        <testsuite name="Dwp_CompactStock Unit Tests">
+            <file>Dwp_CompactStockTest.php</file>
+        </testsuite>
+        <testsuite name="Dwp_CompactStock Functional Tests">
+            <file>FunctionalStockTest.php</file>
+            <file>OrderStatusChangeTest.php</file>
+        </testsuite>
+        <testsuite name="Dwp_CompactStock Integration Tests">
+            <file>IntegrationTest.php</file>
+        </testsuite>
+    </testsuites>
+    
+    <filter>
+        <whitelist>
+            <directory suffix=".php">../</directory>
+            <exclude>
+                <directory>../tests/</directory>
+                <file>../index.php</file>
+            </exclude>
+        </whitelist>
+    </filter>
+    
+    <logging>
+        <log type="coverage-html" target="coverage-html"/>
+        <log type="coverage-text" target="php://stdout" showUncoveredFiles="false"/>
+    </logging>
+</phpunit>
